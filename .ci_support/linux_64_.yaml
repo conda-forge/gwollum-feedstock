@@ -18,11 +18,8 @@ fftw:
 - '3'
 hdf5:
 - 1.12.2
-pin_run_as_build:
-  fftw:
-    max_pin: x
 root_base:
-- 6.26.6
+- 6.26.8
 target_platform:
 - linux-64
 zip_keys:
