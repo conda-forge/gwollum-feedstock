@@ -21,7 +21,7 @@ docker_image:
 fftw:
 - '3'
 hdf5:
-- 1.12.2
+- 1.14.0
 root_base:
 - 6.26.10
 target_platform:
