@@ -33,7 +33,7 @@ requirements:
   host:
     - fftw
     - hdf5
-    - libframel >=8.40.5
+    - libframel >=8.42
     - root_base
   run:
     - fftw
