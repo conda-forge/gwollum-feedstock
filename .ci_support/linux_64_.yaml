@@ -19,7 +19,7 @@ fftw:
 hdf5:
 - 1.14.1
 root_base:
-- 6.28.0
+- 6.28.4
 target_platform:
 - linux-64
 zip_keys:
