@@ -1,5 +1,5 @@
 build_platform:
-  linux_aarch64: linux_64
+  linux_aarch64: linux_aarch64
   osx_arm64: osx_64
 conda_build:
   pkg_format: '2'
@@ -10,5 +10,5 @@ github:
 os_version:
   linux_64: cos7
 provider:
-  linux_aarch64: default
+  linux_aarch64: travis
 test: native_and_emulated
