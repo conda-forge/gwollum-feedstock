@@ -1,5 +1,5 @@
 {% set name = "gwollum" %}
-{% set version = "4.0.0" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://git.ligo.org/virgo/virgoapp/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c8536c5e82b9f282ba58c9a2611e3ec64056336dd20b12b918eb2f44084794d5
+  sha256: 5f6a18749057d4b28cee3ceba467b723ec7e462c09e95d5106e7b5ccb49c079c
   patches:
     # fix rootcling when cross-compiling
     - rootcling-cross.patch  # [osx and arm64]
@@ -15,7 +15,7 @@ source:
 build:
   error_overdepending: true
   error_overlinking: true
-  number: 5
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("gwollum", max_pin="x") }}
