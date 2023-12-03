@@ -22,8 +22,10 @@ fftw:
 - '3'
 hdf5:
 - 1.14.2
+libframel:
+- '8.41'
 root_base:
-- 6.28.4
+- 6.28.10
 target_platform:
 - linux-aarch64
 zip_keys:
