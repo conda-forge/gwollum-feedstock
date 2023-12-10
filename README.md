@@ -22,14 +22,7 @@ Current build status
 ====================
 
 
-<table><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://app.travis-ci.com/conda-forge/gwollum-feedstock">
-        <img alt="linux" src="https://img.shields.io/travis/com/conda-forge/gwollum-feedstock/main.svg?label=Linux">
-      </a>
-    </td>
-  </tr>
+<table>
     
   <tr>
     <td>Azure</td>
@@ -68,6 +61,20 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_root_base6.30.2" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_root_base6.28.10</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_root_base6.28.10" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_root_base6.30.2</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_root_base6.30.2" alt="variant">
                 </a>
               </td>
             </tr><tr>
