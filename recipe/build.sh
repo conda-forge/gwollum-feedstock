@@ -23,7 +23,8 @@ cmake \
 cmake --build . --parallel ${CPU_COUNT} --verbose
 
 # test
-if [[ ("${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "") && "$(uname)" != "Darwin" ]]; then
+# root is broken inside qemu, see https://github.com/conda-forge/gwollum-feedstock/pull/53#issuecomment-1849882209
+if [[ ("${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" && "${CROSSCOMPILING_EMULATOR}" == "") && "$(uname)" != "Darwin" ]]; then
     ctest --parallel ${CPU_COUNT} --verbose
 fi
 
