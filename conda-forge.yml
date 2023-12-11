@@ -10,4 +10,5 @@ github:
   tooling_branch_name: main
 os_version:
   linux_64: cos7
-test: native_and_emulated
+# ROOT fails when running inside QEMU
+test: native
