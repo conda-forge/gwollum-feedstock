@@ -1,7 +1,11 @@
+BUILD:
+- aarch64-conda_cos7-linux-gnu
 c_compiler:
 - gcc
 c_compiler_version:
 - '12'
+cdt_arch:
+- aarch64
 cdt_name:
 - cos7
 channel_sources:
@@ -17,13 +21,13 @@ docker_image:
 fftw:
 - '3'
 hdf5:
-- 1.14.2
+- 1.14.3
 libframel:
 - '8.41'
 root_base:
 - 6.28.10
 target_platform:
-- linux-64
+- linux-aarch64
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
