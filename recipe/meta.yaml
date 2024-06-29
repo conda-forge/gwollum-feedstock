@@ -15,7 +15,7 @@ source:
 build:
   error_overdepending: true
   error_overlinking: true
-  number: 2
+  number: 3
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("gwollum", max_pin="x") }}
@@ -23,11 +23,11 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake >=3.12.0
     - make  # [unix]
     - pkg-config  # [unix]
-    - sysroot_linux-64 2.17  # [linux64]
     # when cross-compiling, need rootcling from build_platform
     - root_base  # [osx and arm64]
   host:
@@ -41,7 +41,6 @@ requirements:
     - libframel
     - root_base
   run_constrained:
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
 test:
   requires:
