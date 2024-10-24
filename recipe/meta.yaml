@@ -22,9 +22,9 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}
+    - {{ compiler("c") }}
+    - {{ compiler("cxx") }}
     - {{ stdlib("c") }}
-    - {{ compiler('cxx') }}
     - cmake >=3.12.0
     - make  # [unix]
     - pkg-config  # [unix]
@@ -33,14 +33,8 @@ requirements:
   host:
     - fftw
     - hdf5
-    - libframel >=8.42
-    - root_base
-  run:
-    - fftw
-    - hdf5
     - libframel
     - root_base
-  run_constrained:
 
 test:
   requires:
