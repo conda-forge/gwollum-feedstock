@@ -22,8 +22,6 @@ fftw:
 - '3'
 hdf5:
 - 1.14.3
-libframel:
-- '8.41'
 root_base:
 - 6.32.2
 target_platform:
