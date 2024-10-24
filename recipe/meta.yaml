@@ -33,7 +33,7 @@ requirements:
   host:
     - fftw
     - hdf5
-    - libframel
+    - libframel 8.42
     - root_base
 
 test:
