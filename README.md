@@ -91,20 +91,6 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_root_base6.32.2" alt="variant">
                 </a>
               </td>
-            </tr><tr>
-              <td>osx_arm64_root_base6.32.0</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_root_base6.32.0" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_root_base6.32.2</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_root_base6.32.2" alt="variant">
-                </a>
-              </td>
             </tr>
           </tbody>
         </table>
