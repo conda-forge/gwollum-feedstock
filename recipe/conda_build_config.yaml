@@ -1,3 +1,0 @@
-# match what root_base was built against
-c_stdlib_version:    # [osx]
-  - 11.0             # [osx]
