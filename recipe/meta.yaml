@@ -9,6 +9,8 @@ source:
   url: https://git.ligo.org/virgo/virgoapp/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: 7507afd34a53cc167612f869bba37967bfa9d76bf4b5b88f65ac52acf501fe98
   patches:
+    # fix https://git.ligo.org/virgo/virgoapp/GWOLLUM/-/issues/59
+    - cmakelists-version.patch
     # fix rootcling when cross-compiling
     - rootcling-cross.patch  # [osx and arm64]
 
