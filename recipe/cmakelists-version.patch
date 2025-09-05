@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 0467d44..b334e6f 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -13,7 +13,7 @@ cmake_minimum_required(VERSION 3.12.0 FATAL_ERROR)
+ project(
+   GWOLLUM
+   LANGUAGES CXX
+-  VERSION 4.2.0
++  VERSION 4.2.1
+   DESCRIPTION "Tools for gravitational-wave analyses"
+   HOMEPAGE_URL "https://virgo.docs.ligo.org/virgoapp/GWOLLUM/"
+   )
