@@ -1,6 +1,6 @@
 bot:
   abi_migration_branches:
-    - v4.1.x
+  - v4.1.x
 build_platform:
   linux_aarch64: linux_64
   linux_ppc64le: linux_64
@@ -12,4 +12,4 @@ github:
   branch_name: main
   repo_name: gwollum-feedstock
   tooling_branch_name: main
-test: native
+test: native_and_emulated
