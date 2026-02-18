@@ -17,7 +17,6 @@ The GWOLLUM package contains a set of software tools designed to perform
 GW analyses.  Most of the code source is written with the C++ language
 and it also heavily relies on the CERN ROOT libraries (also C++).
 
-
 Current build status
 ====================
 
