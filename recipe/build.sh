@@ -5,8 +5,9 @@ mkdir -p _build
 pushd _build
 
 # hack rootcling calls to not set DYLD_LIBRARY_PATH
+# (not needed for ROOT >= 6.38.0 where this was removed upstream)
 if [[ "${target_platform}" == "osx-64" ]]; then
-	patch -N -p0 -f -i $RECIPE_DIR/rootcling-dyld_library_path-hack.patch -d $PREFIX
+	patch -N -p0 -f -i $RECIPE_DIR/rootcling-dyld_library_path-hack.patch -d $PREFIX || true
 fi
 
 # configure
@@ -14,7 +15,6 @@ cmake \
 	${SRC_DIR} \
 	${CMAKE_ARGS} \
 	-DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo \
-	-DCMAKE_CROSSCOMPILING_EMULATOR:STRING="${CMAKE_CROSSCOMPILING_EMULATOR}" \
 	-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen:BOOL=true \
 	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
 ;
@@ -23,8 +23,7 @@ cmake \
 cmake --build . --parallel ${CPU_COUNT} --verbose
 
 # test
-# root is broken inside qemu, see https://github.com/conda-forge/gwollum-feedstock/pull/53#issuecomment-1849882209
-if [[ ("${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" && "${CROSSCOMPILING_EMULATOR}" == "") && "$(uname)" != "Darwin" ]]; then
+if [[ "$(uname)" != "Darwin" ]]; then
     ctest --parallel ${CPU_COUNT} --verbose
 fi
 
@@ -33,7 +32,7 @@ cmake --build . --parallel ${CPU_COUNT} --verbose --target install
 
 # revert hack
 if [[ "${target_platform}" == "osx-64" ]]; then
-	patch -R -p0 -f -i $RECIPE_DIR/rootcling-dyld_library_path-hack.patch -d $PREFIX
+	patch -R -p0 -f -i $RECIPE_DIR/rootcling-dyld_library_path-hack.patch -d $PREFIX || true
 fi
 
 # -- build activate script
