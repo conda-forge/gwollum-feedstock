@@ -17,7 +17,6 @@ The GWOLLUM package contains a set of software tools designed to perform
 GW analyses.  Most of the code source is written with the C++ language
 and it also heavily relies on the CERN ROOT libraries (also C++).
 
-
 Current build status
 ====================
 
@@ -36,73 +35,108 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_root_base6.36.8</td>
+              <td>linux_64_root_base6.36.8root_cxx_standard20</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_root_base6.36.8" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_root_base6.36.8root_cxx_standard20" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_root_base6.38.0</td>
+              <td>linux_64_root_base6.38.0root_cxx_standard20</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_root_base6.38.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_root_base6.38.0root_cxx_standard20" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_root_base6.36.8</td>
+              <td>linux_64_root_base6.38.0root_cxx_standard23</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_root_base6.36.8" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_root_base6.38.0root_cxx_standard23" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_root_base6.38.0</td>
+              <td>linux_aarch64_root_base6.36.8root_cxx_standard20</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_root_base6.38.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_root_base6.36.8root_cxx_standard20" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_root_base6.36.8</td>
+              <td>linux_aarch64_root_base6.38.0root_cxx_standard20</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_root_base6.36.8" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_root_base6.38.0root_cxx_standard20" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_root_base6.38.0</td>
+              <td>linux_aarch64_root_base6.38.0root_cxx_standard23</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_root_base6.38.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_root_base6.38.0root_cxx_standard23" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_root_base6.36.8</td>
+              <td>linux_ppc64le_root_base6.36.8root_cxx_standard20</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_root_base6.36.8" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_root_base6.36.8root_cxx_standard20" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_root_base6.38.0</td>
+              <td>linux_ppc64le_root_base6.38.0root_cxx_standard20</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_root_base6.38.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_root_base6.38.0root_cxx_standard20" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_root_base6.36.8</td>
+              <td>linux_ppc64le_root_base6.38.0root_cxx_standard23</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_root_base6.36.8" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_root_base6.38.0root_cxx_standard23" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_root_base6.38.0</td>
+              <td>osx_64_root_base6.36.8root_cxx_standard20</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_root_base6.38.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_root_base6.36.8root_cxx_standard20" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_root_base6.38.0root_cxx_standard20</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_root_base6.38.0root_cxx_standard20" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_root_base6.38.0root_cxx_standard23</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_root_base6.38.0root_cxx_standard23" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_root_base6.36.8root_cxx_standard20</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_root_base6.36.8root_cxx_standard20" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_root_base6.38.0root_cxx_standard20</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_root_base6.38.0root_cxx_standard20" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_root_base6.38.0root_cxx_standard23</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8797&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gwollum-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_root_base6.38.0root_cxx_standard23" alt="variant">
                 </a>
               </td>
             </tr>
