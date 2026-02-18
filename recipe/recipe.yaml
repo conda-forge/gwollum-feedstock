@@ -1,0 +1,73 @@
+schema_version: 1
+
+context:
+  name: gwollum
+  version: 4.1.1
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://git.ligo.org/virgo/virgoapp/${{ name }}/-/archive/${{ version }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 2cd42b68703e7e76299cd81baab57bb20216996721c8d1b62437fb1b57dca74d
+  patches:
+    # fix rootcling when cross-compiling
+    - if: osx and arm64
+      then: rootcling-cross.patch
+    # add missing TMath.h include for TMath::Min/Max
+    - tmath-include.patch
+
+build:
+  number: 8
+  skip: win
+
+requirements:
+  build:
+    - ${{ compiler("c") }}
+    - ${{ compiler("cxx") }}
+    - ${{ stdlib("c") }}
+    - cmake >=3.12.0
+    - if: unix
+      then: make
+    - if: unix
+      then: pkg-config
+    # when cross-compiling, need rootcling from build_platform
+    - if: osx and arm64
+      then: root_base
+  host:
+    - fftw
+    - hdf5
+    - libframel 8.42.*
+    - root_base
+    - root_cxx_standard
+  run_exports:
+    - ${{ pin_subpackage("gwollum", upper_bound="x") }}
+
+tests:
+  - requirements:
+      run:
+        - pkg-config
+    script:
+      - if: unix
+        then: test -f ${GWOLLUM_DATA}/V1-hrec-vsr2.gwf
+      - if: unix
+        then: test -f ${GWOLLUM_PIX}/gwollum.gif
+      - pkg-config --print-errors --exact-version ${{ version }} ${{ name }}
+
+about:
+  license: GPL-3.0-or-later
+  license_file: LICENSE
+  summary: Tools for gravitational-wave analyses
+  description: |
+    The GWOLLUM package contains a set of software tools designed to perform
+    GW analyses.  Most of the code source is written with the C++ language
+    and it also heavily relies on the CERN ROOT libraries (also C++).
+  homepage: https://virgo.docs.ligo.org/virgoapp/${{ name }}/
+  repository: https://git.ligo.org/virgo/virgoapp/${{ name }}.git
+  documentation: https://virgo.docs.ligo.org/virgoapp/${{ name }}/
+
+extra:
+  recipe-maintainers:
+    - duncanmmacleod
+    - FlorentRobinet

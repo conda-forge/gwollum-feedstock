@@ -5,8 +5,9 @@ mkdir -p _build
 pushd _build
 
 # hack rootcling calls to not set DYLD_LIBRARY_PATH
+# (not needed for ROOT >= 6.38.0 where this was removed upstream)
 if [[ "${target_platform}" == "osx-64" ]]; then
-	patch -N -p0 -f -i $RECIPE_DIR/rootcling-dyld_library_path-hack.patch -d $PREFIX
+	patch -N -p0 -f -i $RECIPE_DIR/rootcling-dyld_library_path-hack.patch -d $PREFIX || true
 fi
 
 # configure
@@ -33,7 +34,7 @@ cmake --build . --parallel ${CPU_COUNT} --verbose --target install
 
 # revert hack
 if [[ "${target_platform}" == "osx-64" ]]; then
-	patch -R -p0 -f -i $RECIPE_DIR/rootcling-dyld_library_path-hack.patch -d $PREFIX
+	patch -R -p0 -f -i $RECIPE_DIR/rootcling-dyld_library_path-hack.patch -d $PREFIX || true
 fi
 
 # -- build activate script
