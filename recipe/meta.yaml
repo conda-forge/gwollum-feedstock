@@ -11,6 +11,8 @@ source:
   patches:
     # fix rootcling when cross-compiling
     - rootcling-cross.patch  # [osx and arm64]
+    # add missing TMath.h include for TMath::Min/Max
+    - tmath-include.patch
 
 build:
   error_overdepending: true
@@ -35,6 +37,7 @@ requirements:
     - hdf5
     - libframel 8.42
     - root_base
+    - root_cxx_standard
 
 test:
   requires:

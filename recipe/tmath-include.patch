@@ -1,0 +1,10 @@
+--- a/src/Segments/Segments.h
++++ b/src/Segments/Segments.h
+@@ -9,6 +9,7 @@
+ #include "ReadAscii.h"
+ #include <TFile.h>
+ #include <TChain.h>
++#include <TMath.h>
+ #include <TH1.h>
+
+ using namespace std;
