@@ -18,7 +18,7 @@ source:
     - tmath-include.patch
 
 build:
-  number: 1
+  number: 2
   skip: win
 
 requirements:
@@ -30,9 +30,9 @@ requirements:
     - ${{ stdlib("c") }}
     - cmake >=3.12.0
     - if: unix
-      then: make
-    - if: unix
-      then: pkg-config
+      then:
+        - make
+        - pkg-config
   host:
     - fftw
     - hdf5
@@ -46,12 +46,10 @@ tests:
         - pkg-config
     script:
       - if: unix
-        then: test -f ${GWOLLUM_DATA}/V1-hrec-vsr2.gwf
-      - if: unix
-        then: test -f ${GWOLLUM_PIX}/gwollum.gif
-      # run test executables
-      - if: unix
-        then: for gwltest in ${PREFIX}/sbin/gwl-test-*; do ${gwltest}; done
+        then:
+          - test -f ${GWOLLUM_DATA}/V1-hrec-vsr2.gwf
+          - test -f ${GWOLLUM_PIX}/gwollum.gif
+          - for gwltest in ${PREFIX}/sbin/gwl-test-*; do ${gwltest}; done
       - pkg-config --print-errors --exact-version ${{ version }} ${{ name }}
 
 about:
