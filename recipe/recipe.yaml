@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  name: gwollum
+  name: GWOLLUM
   version: 4.1.1
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://git.ligo.org/virgo/virgoapp/${{ name }}/-/archive/${{ version }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 2cd42b68703e7e76299cd81baab57bb20216996721c8d1b62437fb1b57dca74d
+  sha256: e79daa44c811b30bc39f94187693fbfe91edcfa6b7bba1d2453e2374a53db31b
   patches:
     # fix rootcling when cross-compiling
     - if: osx and arm64
@@ -19,7 +19,7 @@ source:
     - tmath-include.patch
 
 build:
-  number: 10
+  number: 11
   skip: win
 
 requirements:
@@ -52,7 +52,7 @@ tests:
         then:
           - test -f ${GWOLLUM_DATA}/V1-hrec-vsr2.gwf
           - test -f ${GWOLLUM_PIX}/gwollum.gif
-      - pkg-config --print-errors --exact-version ${{ version }} ${{ name }}
+      - pkg-config --print-errors --exact-version ${{ version }} ${{ name|lower }}
 
 about:
   license: GPL-3.0-or-later

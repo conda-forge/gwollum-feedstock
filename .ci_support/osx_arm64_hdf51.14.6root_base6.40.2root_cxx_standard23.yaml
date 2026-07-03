@@ -21,11 +21,11 @@ cxx_compiler_version:
 fftw:
 - '3'
 hdf5:
-- '2'
+- 1.14.6
 macos_machine:
 - arm64-apple-darwin20.0.0
 root_base:
-- 6.40.0
+- 6.40.2
 root_cxx_standard:
 - '23'
 target_platform:
