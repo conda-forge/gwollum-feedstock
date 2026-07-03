@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  name: gwollum
+  name: GWOLLUM
   version: 4.2.1
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://git.ligo.org/virgo/virgoapp/${{ name }}/-/archive/${{ version }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 7507afd34a53cc167612f869bba37967bfa9d76bf4b5b88f65ac52acf501fe98
+  sha256: 9273b338978bf920719708ac13c8df82e72b8d0dfd6f7c02603ff18da45cc8c6
   patches:
     # fix https://git.ligo.org/virgo/virgoapp/GWOLLUM/-/issues/59
     - cmakelists-version.patch
@@ -18,7 +18,7 @@ source:
     - tmath-include.patch
 
 build:
-  number: 3
+  number: 4
   skip: win
 
 requirements:
@@ -50,7 +50,7 @@ tests:
           - test -f ${GWOLLUM_DATA}/V1-hrec-vsr2.gwf
           - test -f ${GWOLLUM_PIX}/gwollum.gif
           - for gwltest in ${PREFIX}/sbin/gwl-test-*; do ${gwltest}; done
-      - pkg-config --print-errors --exact-version ${{ version }} ${{ name }}
+      - pkg-config --print-errors --exact-version ${{ version }} ${{ name|lower }}
 
 about:
   license: GPL-3.0-or-later
