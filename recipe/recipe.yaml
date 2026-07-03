@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://git.ligo.org/virgo/virgoapp/${{ name }}/-/archive/${{ version }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 7507afd34a53cc167612f869bba37967bfa9d76bf4b5b88f65ac52acf501fe98
+  sha256: 9273b338978bf920719708ac13c8df82e72b8d0dfd6f7c02603ff18da45cc8c6
   patches:
     # fix https://git.ligo.org/virgo/virgoapp/GWOLLUM/-/issues/59
     - cmakelists-version.patch
